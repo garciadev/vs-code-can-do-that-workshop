@@ -1,0 +1,19 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "Exercise"
+	},
+	{
+		"path": "Solution"
+	}
+],
+  "settings": {
+    "files.exclude": {
+      "Solution": true,
+      "Exercise": true
+    }
+  }
+}

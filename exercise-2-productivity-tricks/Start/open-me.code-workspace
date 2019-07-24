@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "/Users/burkeholland/Dev/burkeholland/fem-vs-code/exercise-2-productivity-tricks/Exercise"
+		},
+		{
+			"path": "/Users/burkeholland/Dev/burkeholland/fem-vs-code/exercise-2-productivity-tricks/Solution"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Solution"
+	}
+}

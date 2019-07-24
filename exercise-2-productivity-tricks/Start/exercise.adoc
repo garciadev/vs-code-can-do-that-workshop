@@ -1,0 +1,165 @@
+= Exercise 2 - Create a website!
+:experimental: true
+ 
+== Create HTML 
+
+1. Create an index.html file in this folder.
+2. Add HTML boilerplate text to the page using an Emmet shortcut
+3. Name it "I Love Lamp"
+
+.Solution
+[%collapsible]
+====
+* Type kbd:[!] and press kbd:[tab] to scaffold out an HTML page
+* Press kbd:[tab] 3 more times to place the cursor at the tab stop in the "Title" attribute and and enter "I Love Lamp"
+* Press kbd:[tab] once more to enter the body of the page
+====
+
+== Include Bulma CSS framework
+
+Add a link tag to the head with a source that points to `https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css`
+
+.Solution
+[%collapsible]
+====
+----
+link
+----
+====
+
+== Add Page Contents
+
+==== Add a section element to the app container that has an input and a button
+
+----
+<section class="section">
+  <div class="has-text-centered">
+    <img src="logo.png" alt="" />
+  </div>
+  <div class="columns">
+    
+  </div>
+</section>
+----
+
+.Solution
+[%collapsible]
+====
+----
+.section>.columns>(.column.is-10>input#colorInput.input.is-large)(.column>a#goButton.button.is-large.is-primary)
+----
+====
+
+Add the following block to the div with a `columns` class
+
+----
+<div class="column is-10">
+  <input
+    id="colorInput"
+    class="input is-large"
+  />
+</div>
+<div class="column">
+  <a id="goButton" class="button is-large is-primary">
+    Go
+  </a>
+</div>
+----
+
+.Solution
+[%collapsible]
+====
+----
+(input#colorInput.input.is-large)(.column>a#goButton.button.is-large.is-primary)
+----
+====
+
+==== Wrap in an app container
+
+Select the section element and wrap it in a container with the following id and class
+
+----
+<div id="app" class="container"></div>
+----
+
+.Solution
+[%collapsible]
+====
+* kbd:[Ctrl] / kbd:[Cmd] + kbd:[Shift] + kbd:[P] 
+* Select "Wrap individual lines with abbreviation"
+----
+#app.container
+----
+* kbd:[Enter] 
+====
+
+
+==== Add another section below the first
+
+----
+<section class="section">
+  <div id="lightBulb">
+    <p class="is-size-1 has-text-centered" id="currentColor"></p>
+  </div>
+</section>
+----
+
+.Solution
+[%collapsible]
+====
+----
+.section>#lightBulb>p.is-size-1.has-text-centered#currentColor
+----
+====
+ 
+==== Add a page Background image to the page
+
+Create a style tag in the head of the page and add a style that points to `background.jpeg`
+
+----
+<style>
+  html {
+    background-image: url(background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    min-height: 1400px;
+  }
+
+  body {
+    background-color: RGBA(255, 255, 255, 0.8);
+    height: 100%;
+  }
+</style>
+----
+
+.Solution
+[%collapsible]
+====
+----
+bgi
+bgc
+bgr
+bgp
+----
+====
+
+==== Rename section tags
+
+The divs with a class of "section" should be an element type of section, not div.
+
+.Solution
+[%collapsible]
+====
+* Highlight `div`
+* kbd:[Ctrl] / kbd:[Cmd] + kbd:[Shift] + kbd:[P] 
+* Select "Update Tag"
+* Type "section"
+
+OR
+
+Install the https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag&WT.mc_id=frontendmasters-workshop-buhollan[Auto Rename Extension]
+====
+
+
+

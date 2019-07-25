@@ -20,8 +20,8 @@ class App {
     // receives the "colorChanged" web socket event
     connection.on("colorChanged", hex => {
       // update the bulb color
-      bulb.style = `fill: #${color};`;
-      currentColor.textContent = `#${color}`;
+      bulb.style = `fill: #${currentColor};`;
+      currentColor.textContent = `#${currentColor}`;
     });
 
     // start the websocket connection

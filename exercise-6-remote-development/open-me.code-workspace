@@ -4,17 +4,17 @@
 			"path": "."
 		},
 		{
-			"path": "./start"
+			"path": "start"
 		},
 		{
-			"path": "./solution"
+			"path": "solution"
 		}
 	],
 	"settings": {
+		// exclude everything from the root folder except the exercise.adoc
 		"files.exclude": {
 			"**/{solution,start}/**": true,
 			"**/*.code-workspace": true
-		},
-		"liveServer.settings.multiRootWorkspaceName": "start"
+		}
 	}
 }

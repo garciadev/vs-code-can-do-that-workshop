@@ -3,7 +3,7 @@
  
 == Create HTML 
 
-1. Create an index.html file in this folder.
+1. Open the `index.html` file in the "start" folder.
 2. Add HTML boilerplate text to the page using an Emmet shortcut
 3. Name it "I Love Lamp"
 

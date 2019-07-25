@@ -1,7 +1,14 @@
 = Exercise 3 - Navigate and Refactor with ease
 :experimental: true
 
-== Essential Shorcuts
+Before you start this lab, make sure that you run the Live Server extension on the "start" workspace. This should open up a browser tab so tht you can see your work as you complete it. 
+
+* Open the Command Palette kbd:[Ctrl] / kbd:[Cmd] + kbd:[Shift] + kbd:[P] 
+* Search for "Live Server: Change Live Server Workspace"
+* Open the Command Palette again
+* Search for "Live Server: Open with Live Server"
+
+== 1. Essential Shorcuts
 
 Practice and commit to memory these essential keyboard shortcuts
 
@@ -21,7 +28,7 @@ Practice and commit to memory these essential keyboard shortcuts
 |kbd:[Ctrl] / kbd:[Cmd] + kbd:[W]
 |===
 
-== Moving, Duplicating and Removing
+== 2. Moving, Duplicating and Removing
 
 You can learn a few keyboard shortcuts that can dramatically improve your editing speed. Namely, Moving lines, duplicating lines and removing lines.
 
@@ -42,7 +49,11 @@ You can learn a few keyboard shortcuts that can dramatically improve your editin
 
 1. Open the `index.html` file in this folder.
 
-2. Move the 
+2. Move the "title" tag above the "link" tag
+
+3. Duplicate the last "meta" tag and add a new one with a description
+
+4. Delete the "description" meta tag
 
 === Collapsing Sections
 
@@ -64,7 +75,7 @@ OR
 
 You can create multiple cursors to edit multiple instances of the same string at the same time.
 
-Open the `src/app.js` file. Rename the "color" variable to "colorInput".
+Open the `src/app.js` file. Rename the "currentColor" variable to "lampColor".
 
 .Solution
 [%collapsible]
@@ -96,7 +107,7 @@ image:regex-modifier.png[alt]
 
 === Renaming
 
-Change the "colorCircle" back to "circle" using Rename refactor
+Change the "lampColor" back to "currentColor" using Rename refactor
 
 .Solution
 [%collapsible]

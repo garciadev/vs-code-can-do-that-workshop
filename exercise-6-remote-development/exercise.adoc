@@ -1,0 +1,122 @@
+:doctype: article
+:experimental: true
+
+= Remote Development - Containers
+
+Create a development environment for the Lamp project which contains all of the proper project configuration, extensions and dependencies.
+
+== 1. Add the container definition
+
+Add the proper files and folders to create the container definition.
+
+.Solution
+[%collapsible]
+====
+* Create a `.devcontainer` folder
+* Inside the `.devcontainer` folder, create...
+** `devcontainer.json`
+** `Dockerfile`
+** `docker-compose.yml`
+====
+
+== 2. Specify the remote container details
+
+Add in the following details to the `devcontainer.json` file...
+
+* name
+* compose file
+* service to execute
+* workspace folder name
+* React Food Truck extension dependency
+
+.Solution
+[%collapsible]
+====
+----
+{
+  "name": "Node.js",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "web",
+  "workspaceFolder": "/workspace",
+  "extensions": [
+    "burkeholland.react-food-truck"
+  ]
+}
+----
+====
+
+== 3. Specify the `Dockerfile`
+
+Fill in the Dockerfile to specify...
+
+1. A Node.js container
+2. Run npm install
+3. Install eslint globally
+
+.Solution
+[%collapsible]
+====
+----
+FROM node:lts
+
+RUN npm install
+
+RUN npm install -g eslint
+----
+====
+
+== 4. Specify the `docker-compose.yml` file
+
+Fill in the `docker-compose` file so that it specifies...
+
+* A "service" called "web"
+* A build context specifying...
+** context: .
+** dockerfile: Dockerfile
+* A "volumes" value set to "..:workspace"
+* Expose port 3000 and map that to port 3000 on your local machine
+
+.Solution
+[%collapsible]
+====
+----
+version: '3'
+services:
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+
+    volumes:
+      - ..:/workspace
+
+    ports:
+      - "3000:3000"
+----
+====
+
+== 5. Load the project in the container
+
+Reload the project in the container that you just specified with the steps above.
+
+.Solution
+[%collapsible]
+====
+* kbd:[Ctrl] / kbd:[Cmd] + kbd:[Shift] + kbd:[P] 
+* Type "remote" and find "Remote-Containers: Open folder in Container"
+====
+
+== 6. Run the project
+
+Run the project and view it in your browser
+
+.Solution
+[%collapsible]
+====
+* Open the terminal with kbd:[Ctrl] + kbd:[`]
+* Run `npm start`
+* Open a new terminal instance
+* Change the to "server" directory with "cd server"
+* Run `npm start`
+====
+

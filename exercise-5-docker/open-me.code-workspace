@@ -1,14 +1,11 @@
 {
-	"folders": [
-		{
-			"path": "Start"
-		},
-		{
-			"path": "Solution"
-		},
-		{
-			"path": "Exercise"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "./start"
+    },
+    {
+      "path": "./solution"
+    }
+  ],
+  "settings": {}
 }

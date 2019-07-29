@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "./start"
+    },
+    {
+      "path": "./solution"
+    }
+  ],
+  "settings": {}
+}

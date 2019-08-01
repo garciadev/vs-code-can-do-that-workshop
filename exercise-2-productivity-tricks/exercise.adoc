@@ -21,15 +21,6 @@ You can't learn all of the VS Code shortcuts, so don't try. I've distilled down 
 | Jump to previous file
 | kbd:[Ctrl] / kbd:[Cmd] + kbd:[P] + kbd:[P]
 
-| Copy a line up/down
-| kbd:[Ctrl] / kbd:[Cmd] + kbd:[Alt] / kbd:[Option] + kbd:[↑] / kbd:[↓]
-
-| Move a line up/down
-| kbd:[Alt] / kbd:[Option] + kbd:[↑] / kbd:[↓]
-
-| Delete a line
-| kbd:[Ctrl] / kbd:[Cmd] + kbd:[Shift] + kbd:[K]
-
 | Set focus to the sidebar 
 | kbd:[Ctrl] / kbd:[Cmd] + kbd:[0]
 

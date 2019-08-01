@@ -8,27 +8,7 @@ Before you start this lab, make sure that you run the Live Server extension on t
 * Open the Command Palette again
 * Search for "Live Server: Open with Live Server"
 
-== 1. Essential Shorcuts
-
-Practice and commit to memory these essential keyboard shortcuts
-
-|===
-|Action |Shortcut
-
-|Toggle Sidebar 
-|kbd:[Ctrl] / kbd:[Cmd] + kbd:[B]
-
-|Go to Previous File
-|kbd:[Ctrl] / kbd:[Cmd] + kbd:[P] + kbd:[P]
-
-|New Window
-|kbd:[Ctrl] / kbd:[Cmd] + kbd:[N]
-
-|Close Window
-|kbd:[Ctrl] / kbd:[Cmd] + kbd:[W]
-|===
-
-== 2. Moving, Duplicating and Removing
+== 1. Moving, Duplicating and Removing
 
 You can learn a few keyboard shortcuts that can dramatically improve your editing speed. Namely, Moving lines, duplicating lines and removing lines.
 

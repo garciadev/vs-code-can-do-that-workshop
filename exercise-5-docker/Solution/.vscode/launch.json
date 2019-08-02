@@ -9,7 +9,7 @@
       "type": "node",
       "request": "attach",
       "remoteRoot": "/usr/src/app",
-      "localRoot": "${workspaceRoot}/server"
+      "localRoot": "${workspaceRoot}"
     }
   ]
 }

@@ -1,11 +1,19 @@
 {
   "folders": [
     {
+      "path": "."
+    },
+    {
       "path": "./start"
     },
     {
       "path": "./solution"
     }
   ],
-  "settings": {}
+  "settings": {
+    "files.exclude": {
+      "{start,solution}": true
+    },
+    "workbench.colorCustomizations": {}
+  }
 }

@@ -15,6 +15,7 @@
 		"files.exclude": {
 			"**/{solution,start}/**": true,
 			"**/*.code-workspace": true
-		}
+		},
+		"workbench.colorCustomizations": {}
 	}
 }

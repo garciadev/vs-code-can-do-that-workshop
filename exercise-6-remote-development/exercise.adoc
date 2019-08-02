@@ -5,118 +5,90 @@
 
 Create a development environment for the Lamp project which contains all of the proper project configuration, extensions and dependencies.
 
-== 1. Add the container definition
+== 1. Add the container definition files to the workspace
 
 Add the proper files and folders to create the container definition.
 
 .Solution
 [%collapsible]
 ====
-* Create a `.devcontainer` folder
-* Inside the `.devcontainer` folder, create...
-** `devcontainer.json`
-** `Dockerfile`
-** `docker-compose.yml`
+* Open the Command Pallete (kbd:[Ctrl] / kbd:[Cmd] + kbd:[Shift] + kbd:[P])
+* Select "Remote-Containers: Add development container configuration files"
+* Select "start" workspace
+* Select "Node.js: Latest (LTS)"
 ====
 
-== 2. Specify the remote container details
+== 2. Open the project in the container
 
-Add in the following details to the `devcontainer.json` file...
-
-* name
-* compose file
-* service to execute
-* workspace folder name
-* React Food Truck extension dependency
+Open the project in the newly created container
 
 .Solution
 [%collapsible]
 ====
-----
-{
-  "name": "Node.js",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "web",
-  "workspaceFolder": "/workspace",
-  "extensions": [
-    "burkeholland.react-food-truck"
-  ]
-}
-----
+* Click on the "Remote Development" icon in the bottom left-hand corner of VS Code
+* Select "Remote-Containers: Re-open folder in container"
 ====
 
-== 3. Specify the `Dockerfile`
+== 3.  Run the app
 
-Fill in the Dockerfile to specify...
-
-1. A Node.js container
-2. Run npm install
-3. Install eslint globally
+Open the terminal and run the application inside the container
 
 .Solution
 [%collapsible]
 ====
-----
-FROM node:lts
-
-RUN npm install
-
-RUN npm install -g eslint
-----
+* Open the terminal (kbd:[Ctrl] + kbd:[`])
+* Start the application with `npm start`
 ====
 
-== 4. Specify the `docker-compose.yml` file
+== 4. Forward the port from the container
 
-Fill in the `docker-compose` file so that it specifies...
-
-* A "service" called "web"
-* A build context specifying...
-** context: .
-** dockerfile: Dockerfile
-* A "volumes" value set to "..:workspace"
-* Expose port 3000 and map that to port 3000 on your local machine
+Forward port 3001 from the container and open the app in your browser.
 
 .Solution
 [%collapsible]
 ====
-----
-version: '3'
-services:
-  web:
-    build: 
-      context: .
-      dockerfile: Dockerfile
-
-    volumes:
-      - ..:/workspace
-
-    ports:
-      - "3000:3000"
-----
+* Open the Command Palette (kbd:[Ctrl] / kbd:[Cmd] + kbd:[Shift] + kbd:[P])
+* Select "Remote-Containers: Forward port from container"
 ====
 
-== 5. Load the project in the container
+== 5. Configure the container to auto-forward the port
 
-Reload the project in the container that you just specified with the steps above.
+Configure the container to automatically publish port 3001
 
 .Solution
 [%collapsible]
 ====
-* kbd:[Ctrl] / kbd:[Cmd] + kbd:[Shift] + kbd:[P] 
-* Type "remote" and find "Remote-Containers: Open folder in Container"
-====
-
-== 6. Run the project
-
-Run the project and view it in your browser
-
-.Solution
-[%collapsible]
-====
-* Open the terminal with kbd:[Ctrl] + kbd:[`]
+* Open the `.devcontainer/devcontainer.json` file
+* Add the following lines...
+----
+"appPort": [
+  3001
+]
+----
+* Open the Command Palette (kbd:[Ctrl] / kbd:[Cmd] + kbd:[Shift] + kbd:[P])
+* Select "Remote-Container: Rebuild Container"
+* When the window re-opens, open the terminal (kbd:[Ctrl] / kbd:[`]) 
 * Run `npm start`
-* Open a new terminal instance
-* Change the to "server" directory with "cd server"
-* Run `npm start`
+* Visit the app in your browser at `localhost:3001`
 ====
+
+== 6. Include some extensions in the container definition
+
+Include the React Foodtruck extension in the container
+
+.Solution
+[%collapsible]
+====
+* Open the `.devcontainer/devcontainer.json` file
+* Add the following lines...
+----
+"extensions": [
+  "burkeholland.react-food-truck"
+]
+----
+* Rebuild the container
+** Open the Command Palette (kbd:[Ctrl] / kbd:[Cmd] + kbd:[Shift] + kbd:[P])
+** Select "Remote-Container: Rebuild Container"
+* Check the Extensions tab to see that all of the React Food Truck extensions are installed
+----
 

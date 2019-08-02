@@ -7,7 +7,13 @@ const App = {
    */
   init() {
     let result = axios
-      .get(`${API_BASE}/setColor?color=1e1e1e`).then(data => console.log(data));
+      .get(`${API_BASE}/setColor?color=1e1e1e`)
+      .then(response => {
+        // do something with the data here
+        response.data.results.forEach(item => {
+          // update the lamp color
+        });
+      });
   }
 };
 

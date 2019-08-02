@@ -1,4 +1,4 @@
-const API_BASE = "https://i-enjoy-lamp.azurewebsites.net/api";
+const API_BASE = process.env.API_BASE;
 import axios from "axios";
 
 const readline = require("readline").createInterface({
@@ -10,7 +10,7 @@ function setColor(color) {
   axios
     .get(`${API_BASE}/setColor?color=${color}`)
     .then(() => {
-      console.log(`The lamp color is now: ${color}`);
+      console.log(`The lamp color has been changed to: ${color}`);
     })
     .catch(err => {
       console.log(err.message);

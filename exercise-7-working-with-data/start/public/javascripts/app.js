@@ -29,12 +29,7 @@ class App {
 
     goButton.addEventListener("click", async () => {
       const color = colorInput.value;
-      this.setColor(color);
-    });
-
-    goButton.addEventListener("click", async () => {
-      const color = colorInput.value;
-      this.setColor(color);
+      await this.setColor(color);
     });
   }
 
@@ -44,23 +39,8 @@ class App {
    */
   async setColor(color) {
     await fetch(
-      `${API_BASE}/setColor?color=${color.substring(1, color.length)}`
+      `/set?color=${color.substring(1, color.length)}`
     );
-  }
-
-  /**
-   * Creates the color circle HTML element
-   * @param {string} color
-   */
-  createColumn(color) {
-    let column = document.createElement("div");
-    column.className = "column is-1 pastColor drop";
-    column.style = `background-color: #${color}`;
-    column.addEventListener("click", () => {
-      this.setColor(color);
-    });
-
-    return column;
   }
 }
 

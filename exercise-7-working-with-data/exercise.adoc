@@ -1,11 +1,9 @@
 :doctype: article
 :experimental: true
 
-= 5. Working With Data
+= 7. Working With Data
 
-Before you go through this exercise, make sure that you have the VS Code Remote Development Extension pack installed. 
-
-Open a new instance of VS Code on the "Exercises" folder.
+Open a new instance of VS Code on the "start" folder.
 
 Click on the "Remote Development" icon in the bottom left-hand corner of the taskbar.
 
@@ -13,7 +11,7 @@ image::images/remote-dev-task-bar.png[VS Code Remote Development Taskbar Item]
 
 Select "Remote Development: Reopen Folder in Container"
 
-== Connect to Mongo DB
+== 1. Connect to Mongo DB
 
 Connect to the local instance of Mongo DB.
 

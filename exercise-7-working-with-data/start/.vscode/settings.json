@@ -10,5 +10,6 @@
       "server": "mysql",
       "username": "root"
     }
-  ]
+  ],
+  "workbench.colorCustomizations": {}
 }

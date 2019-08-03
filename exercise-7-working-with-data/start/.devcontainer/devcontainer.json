@@ -8,6 +8,7 @@
     "dbaeumer.vscode-eslint",
     "ms-azuretools.vscode-cosmosdb",
     "alexcvzz.vscode-sqlite",
-    "formulahendry.vscode-mysql"
+    "formulahendry.vscode-mysql",
+    "esbenp.prettier-vscode"
   ]
 }
